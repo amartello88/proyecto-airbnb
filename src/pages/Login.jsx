@@ -7,7 +7,7 @@ function Login() {
   const { login } = useAuth();
   const navigate = useNavigate();
 
-  const SECRET_KEY = "lunamartellocasita";
+  const SECRET_KEY = "admin";
 
   const handleSubmit = (e) => {
     e.preventDefault();
