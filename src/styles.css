@@ -182,4 +182,20 @@ h3 {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+/*Login footer */
+.login-footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
 
+.login-footer a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.login-footer a:hover {
+  color: #007acc; /* azul elegante al pasar el mouse */
+}

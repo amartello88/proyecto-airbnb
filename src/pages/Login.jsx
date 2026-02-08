@@ -39,6 +39,17 @@ function Login() {
 
           <button>Log In</button>
         </form>
+
+        {/* Footer con link a GitHub */}
+        <div className="login-footer">
+          <a
+            href="https://github.com/amartello88"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Developed by Luna M  ♡
+          </a>
+        </div>
       </div>
     </div>
   );
