@@ -6,7 +6,7 @@ Incluye autenticación básica con una clave de acceso y despliegue en la nube.
 ## 🚀 Tecnologías utilizadas
 - React (frontend)
 - Node.js / Express (backend)
-- MySQL / MongoDB (base de datos)
+- MongoDB con **MongoDB Atlas** (base de datos en la nube)
 - Vercel y Render (deploy)
 
 ## 🔑 Credenciales de acceso
