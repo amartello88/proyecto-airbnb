@@ -48,7 +48,7 @@ function Login() {
             rel="noopener noreferrer"
             className="github-footer-link"
           >
-            <img src="/public/github.png" alt="GitHub" />
+            <img src="/github.png" alt="GitHub" />
             <span>Developed by Luna M ♡</span>
           </a>
         </div>
