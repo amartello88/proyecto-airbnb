@@ -259,6 +259,14 @@ h3 {
 .github-footer-link:hover {
   color: #9d6dd1; /* tu lila */
 }
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #666;
+  font-size: 0.9rem;
+}
 
 ul li {
   background: white;
