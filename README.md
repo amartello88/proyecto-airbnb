@@ -16,9 +16,10 @@ La clave de acceso por defecto es: admin
 
 Clona el repositorio:
 
-```bash
 git clone https://github.com/amartello88/proyecto-airbnb
 npm install
+
+▶️ Uso
 npm run dev
 http://localhost:5173
 Ingresa la clave admin en el login para acceder al dashboard.
