@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import githubLogo from "../assets/github.png"; // 👈 Importa la imagen
 
 function Login() {
   const [key, setKey] = useState("");
@@ -48,7 +49,7 @@ function Login() {
             rel="noopener noreferrer"
             className="github-footer-link"
           >
-            <img src="/github.png" alt="GitHub" />
+            <img src={githubLogo} alt="GitHub" />
             <span>Developed by Luna M ♡</span>
           </a>
         </div>
