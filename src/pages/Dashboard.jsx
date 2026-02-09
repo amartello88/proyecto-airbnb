@@ -15,7 +15,7 @@ function Dashboard() {
     <div className="container">
       {/* Header con título a la izquierda y botón a la derecha */}
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
-        <h1>Reservas Airbnb</h1>
+        <h1>Calendario de Reservas</h1>
         <button onClick={handleLogout}>Salir</button>
       </div>
 

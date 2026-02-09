@@ -46,8 +46,10 @@ function Login() {
             href="https://github.com/amartello88"
             target="_blank"
             rel="noopener noreferrer"
+            className="github-footer-link"
           >
-            Developed by Luna M  ♡
+            <img src="/public/github.png" alt="GitHub" />
+            <span>Developed by Luna M ♡</span>
           </a>
         </div>
       </div>
