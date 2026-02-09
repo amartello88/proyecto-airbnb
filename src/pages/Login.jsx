@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import githubLogo from "../assets/github.png"; // 👈 Importa la imagen
+import githubLogo from "../assets/github.png";
+import { FaEye, FaEyeSlash } from "react-icons/fa"; // 👈 Importa los íconos
 
 function Login() {
   const [key, setKey] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const { login } = useAuth();
   const navigate = useNavigate();
 
@@ -30,18 +32,25 @@ function Login() {
         <h2>Iniciar sesión</h2>
 
         <form onSubmit={handleSubmit}>
-          <input
-            type="password"
-            placeholder="Clave de acceso"
-            value={key}
-            onChange={(e) => setKey(e.target.value)}
-            required
-          />
+          <div className="input-container">
+            <input
+              type={showPassword ? "text" : "password"}
+              placeholder="Clave de acceso"
+              value={key}
+              onChange={(e) => setKey(e.target.value)}
+              required
+            />
+            <span
+              className="toggle-icon"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+            </span>
+          </div>
 
           <button>Log In</button>
         </form>
 
-        {/* Footer con link a GitHub */}
         <div className="login-footer">
           <a
             href="https://github.com/amartello88"
