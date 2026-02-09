@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ReservationForm from "../components/ReservationForm";
+import { API_URL } from "../config/api";
 
 function Reservations() {
   const [reservations, setReservations] = useState([]);
@@ -7,7 +8,7 @@ function Reservations() {
 
   // GET reservas
   useEffect(() => {
-    fetch("http://localhost:3000/api/reservations")
+    fetch(`${API_URL}/api/reservations`)
       .then((res) => res.json())
       .then((data) => setReservations(data))
       .catch((err) => console.error(err));
@@ -15,7 +16,7 @@ function Reservations() {
 
   // POST
   const addReservation = async (reservation) => {
-    const res = await fetch("http://localhost:3000/api/reservations", {
+    const res = await fetch(`${API_URL}/api/reservations`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(reservation),
@@ -27,14 +28,11 @@ function Reservations() {
 
   // PUT
   const updateReservation = async (id, updatedData) => {
-    const res = await fetch(
-      `http://localhost:3000/api/reservations/${id}`,
-      {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(updatedData),
-      }
-    );
+    const res = await fetch(`${API_URL}/api/reservations/${id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(updatedData),
+    });
 
     const updated = await res.json();
 
@@ -49,7 +47,7 @@ function Reservations() {
   const deleteReservation = async (id) => {
     if (!window.confirm("¿Eliminar esta reserva?")) return;
 
-    await fetch(`http://localhost:3000/api/reservations/${id}`, {
+    await fetch(`${API_URL}/api/reservations/${id}`, {
       method: "DELETE",
     });
 
